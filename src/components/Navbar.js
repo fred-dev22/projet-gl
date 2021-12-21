@@ -1,5 +1,6 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import styled from '@emotion/styled'
+import { NavLink } from "react-router-dom";
 
 const NavContainer = styled.div`
 width: 100%;
@@ -47,6 +48,8 @@ margin:10px 0 10px 0;
     font-weight:bold;
     background-color:transparent;
     color:#551a8b;
+    list-style-type: none;
+    text-decoration: none;
     :hover{
       background-color:#551a8b;
       color:white;
@@ -105,40 +108,40 @@ margin:10px 0 10px 0;
   }
 `
 
-export const Navbar=()=>{
+export const Navbar = () => {
   const [open, setOpen] = useState(false);//j'utilise pour determiner si le menus sur telephone est ouvert ou pas
-    const navItems=(
-        <>
-        <nav className={`list_container`}>
-			<a href="" className={'link'}>Accueil</a>
-			<a href="" className={'link'}>Guide</a>
-			<a href="" className={'link'}>A propos</a>
-			<a href="" className={'link'}>Contact</a>
+  const navItems = (
+    <>
+      <nav className={`list_container`}>
+        <NavLink to="/" className={'link'}>Accueil</NavLink>
+        <NavLink to="" className={'link'}>Guide</NavLink>
+        <NavLink to="" className={'link'}>A propos</NavLink>
+        <NavLink to="" className={'link'}>Contact</NavLink>
 
-        </nav>
-        <div className='action-buttons'>
-            <button className='buttonStyle'  > Se Connecter </button>
-            <button className='buttonStyle'  > S'inscrire </button>
+      </nav>
+      <div className='action-buttons'>
+        <NavLink to="/Conection" className='buttonStyle'  > Se Connecter </NavLink>
+        <NavLink to="/Inscription" className='buttonStyle'  > S'inscrire </NavLink>
 
-        </div>
-        </>
-    )
-return(
+      </div>
+    </>
+  )
+  return (
     <NavContainer>
-        <div className={'top-bar'}>
-            <a href="\" className={'logo_container'}>
-                <img src="/images/logo.png" alt="logo"  width={90} height={70}/>
-                <div className={'brandName'}>GuideTravel</div>
-            </a>
-            {navItems}
-            <div className='toggle-menu'>
+      <div className={'top-bar'}>
+        <a href="\" className={'logo_container'}>
+          <img src="/images/logo.png" alt="logo" width={90} height={70} />
+          <div className={'brandName'}>GuideTravel</div>
+        </a>
+        {navItems}
+        <div className='toggle-menu'>
           <PhoneMenuButton onClick={() => setOpen(!open)} />
         </div>
-        </div>
+      </div>
       <div className={`phone-menu ${open && 'open'}`}>{navItems}</div>
 
     </NavContainer>
-)
+  )
 }
 const PhoneMenuButton = ({ onClick }) => {
   return (
