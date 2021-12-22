@@ -1,6 +1,6 @@
 import React from 'react'
 import { Navbar } from '../components/Navbar'
-import { Div_Conection } from '../components/Div_Conection'
+import { Div_Conection } from '../components/connexion-Component/Div_Conection'
 
 export const Conection = () => {
     return (

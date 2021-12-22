@@ -1,15 +1,18 @@
+import React from 'react';
 import { Home } from './Pages/Home';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {Inscription} from "../src/Pages/Inscription"
 import {Conection} from "../src/Pages/Conection"
+import NotFound from './Pages/NotFound';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" exact element={<Home />} />
-        <Route path="Inscription" exact element={<Inscription />} />
-        <Route path="Conection" exact element={<Conection />} />
+        <Route path="/"  element={<Home />} />
+        <Route path="Inscription" element={<Inscription />} />
+        <Route path="Conection" element={<Conection />} />
+        <Route  path="*" element={<NotFound/>} />
       </Routes>
     </BrowserRouter>
   );
