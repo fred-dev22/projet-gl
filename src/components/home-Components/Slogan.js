@@ -23,7 +23,7 @@ width:100% ;
     color:white;
     border:none;
     :hover{
-       background-color:green;
+       background-color:#551a8b ;
     }
 }
 .divButton{
