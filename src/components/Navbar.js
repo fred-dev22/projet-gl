@@ -120,7 +120,7 @@ export const Navbar = () => {
       <nav className={`list_container`}>
         <NavLink to="/" className={'link'}>Accueil</NavLink>
         <NavLink to="" className={'link'}>Guide</NavLink>
-        <NavLink to="" className={'link'}>A propos</NavLink>
+        <NavLink to="/A_propos" className={'link'}>A propos</NavLink>
         <NavLink to="" className={'link'}>Contact</NavLink>
 
       </nav>
