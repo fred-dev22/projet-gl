@@ -35,6 +35,11 @@ margin:10px 0 10px 0;
       text-transform: uppercase;
       text-decoration:none;
     }
+      .link-active{
+        background-color:red;
+      }
+    
+    
   }
   .action-buttons,
   .list_container {
@@ -115,6 +120,7 @@ export const Navbar = () => {
       <nav className={`list_container`}>
         <NavLink to="/" className={'link'}>Accueil</NavLink>
         <NavLink to="" className={'link'}>Guide</NavLink>
+        <NavLink to="/Voyages" className={'link'}>Nos Voyages</NavLink>
         <NavLink to="" className={'link'}>A propos</NavLink>
         <NavLink to="" className={'link'}>Contact</NavLink>
 
@@ -129,10 +135,10 @@ export const Navbar = () => {
   return (
     <NavContainer>
       <div className={'top-bar'}>
-        <a href="\" className={'logo_container'}>
+        <NavLink to="/" className={'logo_container'}>
           <img src="/images/logo.png" alt="logo" width={90} height={70} />
           <div className={'brandName'}>GuideTravel</div>
-        </a>
+        </NavLink>
         {navItems}
         <div className='toggle-menu'>
           <PhoneMenuButton onClick={() => setOpen(!open)} />
