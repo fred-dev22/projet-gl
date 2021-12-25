@@ -56,28 +56,28 @@ export const Div_Inscription = () => {
                 <br /><br /><br /><br /><br />
                 <div className='final'>
                     <div className='gauche'>
-                        <h1>Sign up</h1>
+                        <h1>S'inscrire'</h1>
                         <Form>
                             <Row className="mb-3">
                                 <Form.Group as={Col} controlId="formGridEmail">
                                     <Form.Label>Email</Form.Label>
-                                    <Form.Control type="email" placeholder="Enter email"  />
+                                    <Form.Control type="email" placeholder="Entrer l'email"  />
                                 </Form.Group>
 
 
                                 <Form.Group as={Col} controlId="formGridPassword">
-                                    <Form.Label>Password</Form.Label>
-                                    <Form.Control type="password" placeholder="Password" />
+                                    <Form.Label>Mot de passe</Form.Label>
+                                    <Form.Control type="password" placeholder="Mot de passe" />
                                 </Form.Group>
                             </Row>
 
                             <Form.Group className="mb-3" controlId="formGridAddress1">
-                                <Form.Label>Name</Form.Label>
-                                <Form.Control placeholder="Your name" />
+                                <Form.Label>Nom</Form.Label>
+                                <Form.Control placeholder="votre Nom" />
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formGridAddress2">
-                                <Form.Label>Phone Number</Form.Label>
+                                <Form.Label>Numero de telephone</Form.Label>
                                 <Form.Control placeholder="6XXXXXXXXX" />
                             </Form.Group>
 

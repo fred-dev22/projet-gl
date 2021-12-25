@@ -3,6 +3,48 @@ import styled from "@emotion/styled"
 import { NavLink } from 'react-router-dom';
 
 
+
+
+const Footer = () => {
+    return (
+        <Container>
+            <div className='div1'>
+                <div className='column'>
+
+                    <span>Services</span>
+                    <NavLink to='/' className={'link'}>Web design</NavLink>
+                    <NavLink to='/' className={'link'}>Development</NavLink>
+                    <NavLink to='/' className={'link'}>Hosting</NavLink>
+                </div>
+                <div className='column'>
+                    <span>A propos</span>
+                    <NavLink to='/' className={'link'}>Agences</NavLink>
+                    <NavLink to='/' className={'link'}>Voyage</NavLink>
+                    <NavLink to='/' className={'link'}>nous contacter</NavLink>
+                </div>
+                <div className='column'>
+                    <span>Newsletter</span>
+                    <div className={'newsLetter'}>
+                        <input type={'email'} placeholder='entrez votre email' />
+                        <button>s'inscrire</button>
+                    </div>
+                    <div className='icon'>
+                        <span className='suivre'>Nous suivre</span>
+                        <img src="images/face.png" width={30} height={30} />
+                        <img src="images/what.png" width={30} height={30} />
+                        <img src="images/inst.png" width={30} height={30} />
+                    </div>
+                </div>
+
+            </div>
+            <div>
+
+            </div>
+
+            <p class="copyright">GuideTravel © 2021</p>
+        </Container>
+    );
+}
 const Container = styled.div`
 background-color:#282d32;
 position:relative;
@@ -12,8 +54,7 @@ flex-direction:column;
 width:100%;
 text-align:center;
 margin-top:20px;
-border-top-left-radius:30px;
-border-top-right-radius:30px;
+
 
 .row{
     display:flex;
@@ -56,10 +97,10 @@ button{
    }
 }
 .icon{
-    padding-top:10px;
+    padding-top:5px;
 }
 img{
-    margin-left:30px;
+    margin-left:10px;
 }
 p{
     color:white;
@@ -67,6 +108,11 @@ p{
     font-size:13px;
     margin-bottom:0;
 
+}
+.suivre{
+    color:white;
+    font-weight:200px;
+    font-size:15px;
 }
 @media (min-width: 768px) {
 .div1{
@@ -79,44 +125,5 @@ justify-content:space-around;
 }
 }
 `
-
-const Footer = () => {
-    return (
-        <Container>
-            <div className='div1'>
-                <div className='column'>
-
-                    <span>Services</span>
-                    <NavLink to='/' className={'link'}>Web design</NavLink>
-                    <NavLink to='/' className={'link'}>Development</NavLink>
-                    <NavLink to='/' className={'link'}>Hosting</NavLink>
-                </div>
-                <div className='column'>
-                    <span>A propos</span>
-                    <NavLink to='/' className={'link'}>Agences</NavLink>
-                    <NavLink to='/' className={'link'}>Voyage</NavLink>
-                    <NavLink to='/' className={'link'}>nous contacter</NavLink>
-                </div>
-                <div className='column'>
-                    <span>Newsletter</span>
-                    <div className={'newsLetter'}>
-                        <input type={'email'} placeholder='entrez votre email' />
-                        <button>s'inscrire</button>
-                    </div>
-                </div>
-
-            </div>
-            <div>
-
-            </div>
-            <div className='icon'>
-                <img src="images/face.png"  width={40} height={40} />
-                <img src="images/what.png" width={40} height={40} />
-                <img src="images/inst.png" width={40} height={40} />
-            </div>
-            <p class="copyright">GuideTravel © 2021</p>
-        </Container>
-    );
-}
 
 export default Footer;

@@ -2,18 +2,23 @@ import React from 'react';
 import { Home } from './Pages/Home';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {Inscription} from "../src/Pages/Inscription"
-import {Conection} from "../src/Pages/Conection"
-import {Voyages} from "../src/Pages/Voyages"
+import {Connexion} from "./Pages/Connexion"
 import NotFound from './Pages/NotFound';
+import Agences from './Pages/Agences';
+import Voyages from './Pages/Voyages';
+import Apropos from './Pages/Apropos';
 
 function App() {
+ 
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/"  element={<Home />} />
-        <Route path="Inscription" element={<Inscription />} />
-        <Route path="Conection" element={<Conection />} />
-        <Route path="Voyages" element={<Voyages />} />
+        <Route path="inscription" element={<Inscription />} />
+        <Route path="connexion" element={<Connexion />} />
+        <Route path="voyages" element={<Voyages/>}/>
+        <Route path="agences" element={<Agences/>}/>
+        <Route path="a-propos" element={<Apropos/>}/>
         <Route  path="*" element={<NotFound/>} />
       </Routes>
     </BrowserRouter>

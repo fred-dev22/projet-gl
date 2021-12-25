@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Form from "react-bootstrap/Form"
 import FloatingLabel from "react-bootstrap/FloatingLabel"
 import styled from '@emotion/styled'
+import {useState} from 'react'
 
 const Div_f = styled.div`
     .div{
@@ -13,6 +14,7 @@ const Div_f = styled.div`
 `
 
 const Div_Filter = () => {
+    
     return (
         <Div_f>
             <div className="div">
@@ -30,6 +32,11 @@ const Div_Filter = () => {
                     <Col md>
                         <FloatingLabel controlId="floatingSelectGrid" label="Nom de l'Agence">
                             <Form.Control type="text" placeholder="Nom de l'Agence" />
+                        </FloatingLabel>
+                    </Col>
+                    <Col md>
+                        <FloatingLabel controlId="floatingSelectGrid" label="Date de depart">
+                            <Form.Control type="text" placeholder="Date de depart" />
                         </FloatingLabel>
                     </Col>
                 </Row>
