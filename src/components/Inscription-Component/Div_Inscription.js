@@ -53,10 +53,10 @@ export const Div_Inscription = () => {
     return (
         <Div_Inscriptions>
             <div className='conteneur'>
-                <br /><br /><br /><br /><br />
+                <br />
                 <div className='final'>
                     <div className='gauche'>
-                        <h1>S'inscrire'</h1>
+                        <h1>S'inscrire</h1>
                         <Form>
                             <Row className="mb-3">
                                 <Form.Group as={Col} controlId="formGridEmail">
@@ -123,7 +123,7 @@ export const Div_Inscription = () => {
                         <img src="/images/inscription.jpg" />
                     </div>
                 </div>
-                <br /><br /><br /><br /><br /><br /><br />
+                <br />
             </div>
         </Div_Inscriptions>
     )

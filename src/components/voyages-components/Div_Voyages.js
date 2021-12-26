@@ -9,47 +9,47 @@ import FloatingLabel from "react-bootstrap/FloatingLabel"
 
 
 const voyagesData = [
-    { id: '1', vile_depart: 'Baffoussam', vile_arrive: 'Bamenda', Heure_depart: '2h', duree: '2h', date_depart: '24 juin 2021', Nom_Agence: 'avenir' },
-    { id: '2', vile_depart: 'Yaounde', vile_arrive: 'Douala', Heure_depart: '20h', duree: '4h', date_depart: '25 juin 2021', Nom_Agence: 'general' },
-    { id: '3', vile_depart: 'Douala', vile_arrive: 'Mbouda', Heure_depart: '6h', duree: '4h', date_depart: '25 juin 2021', Nom_Agence: 'global' },
-    { id: '4', vile_depart: 'Limbe', vile_arrive: 'Maroua', Heure_depart: '4h', duree: '4h', date_depart: '25 juin 2021', Nom_Agence: 'global' },
-    { id: '5', vile_depart: 'Kreibi', vile_arrive: 'Adamaoua', Heure_depart: '19h', duree: '4h', date_depart: '25 juin 2021', Nom_Agence: 'global' },
-    { id: '6', vile_depart: 'Dschang', vile_arrive: 'Yaounde', Heure_depart: '22h', duree: '4h', date_depart: '25 juin 2021', Nom_Agence: 'global' },
-    { id: '7', vile_depart: 'Edea', vile_arrive: 'Kribi', Heure_depart: '5h', duree: '4h', date_depart: '25 juin 2021', Nom_Agence: 'global' },
-    { id: '8', vile_depart: 'Bertoua', vile_arrive: 'Yaounde', Heure_depart: '1h', duree: '4h', date_depart: '25 juin 2021', Nom_Agence: 'global' }
+    { id: '1', vile_depart: 'Baffoussam', vile_arrive: 'Bamenda', Heure_depart: '2h', duree: '2h', date_depart: '24 juin 2021', Nom_Agence: 'avenir', image: 'reserver.png', type_voyage: 'vip', prix: '4000 Fr' },
+    { id: '2', vile_depart: 'Yaounde', vile_arrive: 'Douala', Heure_depart: '20h', duree: '4h', date_depart: '25 juin 2021', Nom_Agence: 'general', image: 'reserver.png', type_voyage: 'vip', prix: '4000 Fr' },
+    { id: '3', vile_depart: 'Douala', vile_arrive: 'Mbouda', Heure_depart: '6h', duree: '4h', date_depart: '25 juin 2021', Nom_Agence: 'global', image: 'reserver.png', type_voyage: 'vip', prix: '4000 Fr' },
+    { id: '4', vile_depart: 'Limbe', vile_arrive: 'Maroua', Heure_depart: '4h', duree: '4h', date_depart: '25 juin 2021', Nom_Agence: 'global', image: 'reserver.png', type_voyage: 'vip', prix: '4000 Fr' },
+    { id: '5', vile_depart: 'Kreibi', vile_arrive: 'Adamaoua', Heure_depart: '19h', duree: '4h', date_depart: '25 juin 2021', Nom_Agence: 'global', image: 'reserver.png', type_voyage: 'vip', prix: '4000 Fr' },
+    { id: '6', vile_depart: 'Dschang', vile_arrive: 'Yaounde', Heure_depart: '22h', duree: '4h', date_depart: '25 juin 2021', Nom_Agence: 'global', image: 'reserver.png', type_voyage: 'vip', prix: '4000 Fr' },
+    { id: '7', vile_depart: 'Edea', vile_arrive: 'Kribi', Heure_depart: '5h', duree: '4h', date_depart: '25 juin 2021', Nom_Agence: 'global', image: 'reserver.png', type_voyage: 'vip', prix: '4000 Fr' },
+    { id: '8', vile_depart: 'Bertoua', vile_arrive: 'Yaounde', Heure_depart: '1h', duree: '4h', date_depart: '25 juin 2021', Nom_Agence: 'global', image: 'reserver.png', type_voyage: 'vip', prix: '4000 Fr' }
 ]
 
 
-const Un_voyage = ({ ville_depart, ville_arrive, duree, Heure_depart, date_depart, Nom_Agence }) => {
+const Un_voyage = ({image,type_voyage, prix, ville_depart, ville_arrive, duree, Heure_depart, date_depart, Nom_Agence }) => {
     return (
         <Div_css>
             <div className="cadre">
                 <div className="photo">
-                    <img src='images/reserver.png' className="image" />
+                    <img src={'images/'+image} className="image" />
                 </div>
                 <div className="droite">
                     <div className="deux">
                         <div className="titre center">
-                            <br />ville Depart:
-                            <br />ville d'arrive:
-                            <br />duree du voyage :
-                            <br />date depart:
-                            <br /><span className="span">heure du depart :</span>
-                            <br />Nom d'agence:
+                            <br />Depart :   {ville_depart}
+                            <br />date depart :   {date_depart}
+                            <br />duree :   {duree}
+                            <br />type :
+                            <br />prix :
+                            <br />
                         </div>
                         <div className="reponse center">
-                            <br /> {ville_depart}
-                            <br />{ville_arrive}
-                            <br />{duree}
-                            <br />{date_depart}
-                            <br />{Heure_depart}
-                            <br />{Nom_Agence}
+                            <br /> Arrivée : {ville_arrive}
+                            <br />heure :   {Heure_depart}
+                            <br />agence :  {Nom_Agence}
+                            <br />{type_voyage}
+                            <br />{prix}
+                            <br />
                         </div>
                     </div>
 
                     <div className="bouton">
                         <Button variant="primary btn" >
-                            Demander une reservation
+                            Faire une reservation
                         </Button>
                     </div>
 
@@ -116,7 +116,7 @@ const Div_Voyages = () => {
             </Div_f>
             {voyagesData.filter((task) => {
                 return task.vile_depart.toLocaleLowerCase().includes(vdepart) && task.vile_arrive.toLocaleLowerCase().includes(vArrive) && task.date_depart.toLocaleLowerCase().includes(Ddepart) && task.Nom_Agence.toLocaleLowerCase().includes(Agence)
-            }).map((task) => <Un_voyage task={task} key={task.id} Nom_Agence={task.Nom_Agence} date_depart={task.date_depart} Heure_depart={task.Heure_depart} ville_depart={task.vile_depart} ville_arrive={task.vile_arrive} duree={task.duree} />)}
+            }).map((task) => <Un_voyage task={task} key={task.id} type_voyage={task.type_voyage} image={task.image} prix={task.prix} Nom_Agence={task.Nom_Agence} date_depart={task.date_depart} Heure_depart={task.Heure_depart} ville_depart={task.vile_depart} ville_arrive={task.vile_arrive} duree={task.duree} />)}
         </>
     )
 }
@@ -158,6 +158,12 @@ const Div_css = styled.div`
         border-radius: 10px;
         display: flex;
         font-weight:bold;
+        animation: apparit 0.8s ease-out;
+        
+    }
+    .cadre:hover{
+        transform: scale(1.02);
+        transition: 1s;
     }
     .photo{
         width: 40%;
@@ -171,13 +177,13 @@ const Div_css = styled.div`
     }
     .deux{
         display: flex;
-        width: 50%;
+        width: 70%;
     }
     .titre{
-        width: 60%;
+        width: 50%;
     }
     .reponse{
-        width: 40%;
+        width: 50%;
     }
     .bouton{
         width: 47%;
@@ -185,7 +191,7 @@ const Div_css = styled.div`
     .btn{
         box-shadow:0 0 0 0 #6c63ff;
         animation: pulse 1.7s infinite;
-        margin-left: 40%;
+        margin-left: 10%;
         margin-top: 50%;
         height: 50px;
     }
@@ -212,7 +218,7 @@ const Div_css = styled.div`
             height: auto;
         }
         .bouton{
-            width: 80%;
+            width: 79%;
             margin-top: 0%;
             margin-bottom: 2%;
             padding-top: 0%;
@@ -220,6 +226,7 @@ const Div_css = styled.div`
         .btn{
             margin-top: 10%;
             height: 50px;
+            margin-left: 38%;
         }
     }
     .green{
