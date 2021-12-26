@@ -4,8 +4,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useState } from "react"
-import { NavLink } from 'react-bootstrap';
 import { useNavigate } from 'react-router';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -62,7 +62,7 @@ export const Div_Conection = (props) => {
                             <Button variant="primary" type="button" onClick={Redirection} >
                                 Se Connecter
                             </Button> 
-                            <div className='sincr'><span className='si'>vous n'avez pas de compte?</span> <NavLink to="/inscription" >S'inscrire</NavLink></div>
+                            <div className='sincr'><span className='si'>vous n'avez pas de compte?</span> <NavLink to="/inscription" className="link">S'inscrire</NavLink></div>
                         </Form>
 
                     </div>
@@ -106,6 +106,11 @@ margin-left: 17%;
 margin-right: 17%;
 border-radius: 20px;
 box-shadow: 0px 0px 2px black;
+}
+.link{
+    text-decoration: none;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 .gauche{
 height: 500px;

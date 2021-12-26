@@ -43,7 +43,14 @@ const Div_Inscriptions = styled.div`
     }
     @media (max-width: 768px){
         .final{
-            margin: 0px;
+            margin: 3px;
+    
+        }
+        .droite{
+            width: 0px;
+        }
+        .gauche{
+            width: 100%
         }
     }
 
