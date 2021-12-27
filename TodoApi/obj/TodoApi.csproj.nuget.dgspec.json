@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\franck\\Desktop\\projet\\projet-gl\\TodoApi\\TodoApi.csproj": {}
+    "C:\\Users\\donald\\Desktop\\TP IN3\\Projet Gl\\projet-gl\\TodoApi\\TodoApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\franck\\Desktop\\projet\\projet-gl\\TodoApi\\TodoApi.csproj": {
+    "C:\\Users\\donald\\Desktop\\TP IN3\\Projet Gl\\projet-gl\\TodoApi\\TodoApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\franck\\Desktop\\projet\\projet-gl\\TodoApi\\TodoApi.csproj",
+        "projectUniqueName": "C:\\Users\\donald\\Desktop\\TP IN3\\Projet Gl\\projet-gl\\TodoApi\\TodoApi.csproj",
         "projectName": "TodoApi",
-        "projectPath": "C:\\Users\\franck\\Desktop\\projet\\projet-gl\\TodoApi\\TodoApi.csproj",
-        "packagesPath": "C:\\Users\\franck\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\franck\\Desktop\\projet\\projet-gl\\TodoApi\\obj\\",
+        "projectPath": "C:\\Users\\donald\\Desktop\\TP IN3\\Projet Gl\\projet-gl\\TodoApi\\TodoApi.csproj",
+        "packagesPath": "C:\\Users\\donald\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\donald\\Desktop\\TP IN3\\Projet Gl\\projet-gl\\TodoApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\franck\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\donald\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
