@@ -192,5 +192,5 @@ background-color:#6c63ff;
       color:white;
     }
   }
-  
+}
 `
