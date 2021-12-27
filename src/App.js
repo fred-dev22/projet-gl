@@ -22,7 +22,7 @@ function App() {
         <Route path="agences" element={<Agences/>}/>
         <Route path="a-propos" element={<Apropos/>}/>
         <Route path="compte" element={<Mon_compte/>}/>
-        <Route path="reservation" element={<Reservation />}/>
+        <Route path="reservation/:id" element={<Reservation />}/>
         <Route  path="*" element={<NotFound/>} />
       </Routes>
     </BrowserRouter>

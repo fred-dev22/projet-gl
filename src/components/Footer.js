@@ -30,9 +30,9 @@ const Footer = () => {
                     </div>
                     <div className='icon'>
                         <span className='suivre'>Nous suivre</span>
-                        <img src="images/face.png" width={30} height={30} />
-                        <img src="images/what.png" width={30} height={30} />
-                        <img src="images/inst.png" width={30} height={30} />
+                        <img src="/images/face.png" width={30} height={30} />
+                        <img src="/images/what.png" width={30} height={30} />
+                        <img src="/images/inst.png" width={30} height={30} />
                     </div>
                 </div>
 

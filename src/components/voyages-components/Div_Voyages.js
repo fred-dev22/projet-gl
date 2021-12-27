@@ -8,8 +8,8 @@ import Form from "react-bootstrap/Form"
 import FloatingLabel from "react-bootstrap/FloatingLabel"
 import { useNavigate } from "react-router";
 
-
-const voyagesData = [
+//avec la bd faudra egalement linclure dans Div reservation
+export const voyagesData = [
     { id: '1', vile_depart: 'Baffoussam', vile_arrive: 'Bamenda', Heure_depart: '2h', duree: '2h', date_depart: '24 juin 2021', Nom_Agence: 'avenir', image: 'reserver.png', type_voyage: 'vip', prix: '4000 Fr' },
     { id: '2', vile_depart: 'Yaounde', vile_arrive: 'Douala', Heure_depart: '20h', duree: '4h', date_depart: '25 juin 2021', Nom_Agence: 'general', image: 'reserver.png', type_voyage: 'vip', prix: '4000 Fr' },
     { id: '3', vile_depart: 'Douala', vile_arrive: 'Mbouda', Heure_depart: '6h', duree: '4h', date_depart: '25 juin 2021', Nom_Agence: 'global', image: 'reserver.png', type_voyage: 'vip', prix: '4000 Fr' },
@@ -21,12 +21,12 @@ const voyagesData = [
 ]
 
 
-export const Un_voyage = ({image,type_voyage, prix, ville_depart, ville_arrive, duree, Heure_depart, date_depart, Nom_Agence }) => {
+export const Un_voyage = ({id, image,type_voyage, prix, ville_depart, ville_arrive, duree, Heure_depart, date_depart, Nom_Agence }) => {
     
     
     let navigate=useNavigate()
     const HandleReservation = () => {
-        navigate("/reservation")
+        navigate("/reservation/"+id)
     }
     
     return (
@@ -123,7 +123,7 @@ const Div_Voyages = () => {
             </Div_f>
             {voyagesData.filter((task) => {
                 return task.vile_depart.toLocaleLowerCase().includes(vdepart) && task.vile_arrive.toLocaleLowerCase().includes(vArrive) && task.date_depart.toLocaleLowerCase().includes(Ddepart) && task.Nom_Agence.toLocaleLowerCase().includes(Agence)
-            }).map((task) => <Un_voyage task={task} key={task.id} type_voyage={task.type_voyage} image={task.image} prix={task.prix} Nom_Agence={task.Nom_Agence} date_depart={task.date_depart} Heure_depart={task.Heure_depart} ville_depart={task.vile_depart} ville_arrive={task.vile_arrive} duree={task.duree} />)}
+            }).map((task) => <Un_voyage task={task} key={task.id} id={task.id} type_voyage={task.type_voyage} image={task.image} prix={task.prix} Nom_Agence={task.Nom_Agence} date_depart={task.date_depart} Heure_depart={task.Heure_depart} ville_depart={task.vile_depart} ville_arrive={task.vile_arrive} duree={task.duree} />)}
         </>
     )
 }

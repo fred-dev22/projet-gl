@@ -7,8 +7,10 @@ import Row from 'react-bootstrap/Row';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { useState } from "react";
 import { Un_voyage } from "../voyages-components/Div_Voyages";
+import { useParams } from "react-router";
+import { voyagesData } from "../voyages-components/Div_Voyages";
 
-export const Div_Reservation = () => {
+export const Div_Reservation = (props) => {
     const [validated, setValidated] = useState(false);
 
     const handleSubmit = (event) => {
@@ -20,6 +22,30 @@ export const Div_Reservation = () => {
 
         setValidated(true);
     };
+
+
+    //valeurs utilise dans las values des imputs
+
+    const id = useParams().id
+    let villeDepart
+    let villeArrive
+    let Date
+    let HeureDepart
+    let Prix
+    let Agences
+
+    let a= voyagesData.map(
+        item => {
+            if(item.id === id){
+                villeDepart= item.vile_depart
+                villeArrive= item.vile_arrive
+                Date= item.date_depart
+                HeureDepart= item.Heure_depart
+                Prix= item.prix
+                Agences= item.Nom_Agence
+            }
+        }
+    )
     return (
         <Style_form>
             <div className="principal">
@@ -80,21 +106,21 @@ export const Div_Reservation = () => {
                         </Form.Group>
                         <Form.Group as={Col} md="4" controlId="validationCustom04">
                             <Form.Label>Ville de Depart</Form.Label>
-                            <Form.Control type="text" placeholder="Ville de Depart" disabled />
+                            <Form.Control type="text" placeholder="Ville de Depart" value={villeDepart} disabled />
                         </Form.Group>
                         <Form.Group as={Col} md="4" controlId="validationCustom05">
                             <Form.Label>Ville d'arrive</Form.Label>
-                            <Form.Control type="text" placeholder="Ville d'arrive" disabled />
+                            <Form.Control type="text" placeholder="Ville d'arrive" value={villeArrive} disabled />
                         </Form.Group>
                     </Row>
                     <Row className="mb-4">
                         <Form.Group as={Col} md="4" controlId="validationCustom03">
                             <Form.Label>Date de depart</Form.Label>
-                            <Form.Control type="Date" placeholder="Date de depart" disabled />
+                            <Form.Control type="text" placeholder="Date de depart" value={Date} disabled />
                         </Form.Group>
                         <Form.Group as={Col} md="4" controlId="validationCustom04">
                             <Form.Label>Heure de Depart</Form.Label>
-                            <Form.Control type="text" placeholder="Heure de Depart" disabled />
+                            <Form.Control type="text" placeholder="Heure de Depart" value={HeureDepart} disabled />
                         </Form.Group>
                         <Form.Group as={Col} md="4" controlId="validationCustom05">
                             <Form.Label>Nombre de paces</Form.Label>
@@ -107,11 +133,11 @@ export const Div_Reservation = () => {
                     <Row className="mb-4">
                         <Form.Group as={Col} md="4" controlId="validationCustom03">
                             <Form.Label>Prix</Form.Label>
-                            <Form.Control type="text" placeholder="Prix" disabled />
+                            <Form.Control type="text" placeholder="Prix" value={Prix} disabled />
                         </Form.Group>
                         <Form.Group as={Col} md="4" controlId="validationCustom04">
                             <Form.Label>Agence</Form.Label>
-                            <Form.Control type="text" placeholder="Agence" disabled />
+                            <Form.Control type="text" placeholder="Agence" value={Agences} disabled />
                         </Form.Group>
                         <Form.Group as={Col} md="4" controlId="validationCustom05">
                             <Form.Label>Nombre de depot</Form.Label>
