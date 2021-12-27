@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
@@ -47,23 +47,30 @@ const Div_Inscriptions = styled.div`
     }
     @media (max-width: 768px){
         .final{
-            margin: 0px;
+            margin: 3px;
+    
+        }
+        .droite{
+            width: 0px;
+        }
+        .gauche{
+            width: 100%
         }
     }
 
 `
 
 export const Div_Inscription = () => {
-    const [Nom, setNom] = useState ('');
-    const [Prenom, setPrenom] = useState ('');
-    const [Email, setEmail] = useState ('');
-    const [NumeroTelephone, setNumeroTelephone] = useState ('');
-    const [Id, setId] = useState ('');
-    const [Password, setPassword] = useState ('');
-    const [DateInscription, setDateInscription] = useState ('');
-    const [NumCNI, setNumCNI] = useState ('');
+    const [Nom, setNom] = useState('');
+    const [Prenom, setPrenom] = useState('');
+    const [Email, setEmail] = useState('');
+    const [NumeroTelephone, setNumeroTelephone] = useState('');
+    const [Id, setId] = useState('');
+    const [Password, setPassword] = useState('');
+    const [DateInscription, setDateInscription] = useState('');
+    const [NumCNI, setNumCNI] = useState('');
 
-   
+
 
     const handleChangeNom = event => {
         setNom({ name: event.target.value });
@@ -74,25 +81,25 @@ export const Div_Inscription = () => {
     // const handleChangeAdresse = event => {
     //     set({ name: event.target.value });
     // }
-    const  handleChangeNumeroTelephone = event => {
+    const handleChangeNumeroTelephone = event => {
         setNumeroTelephone({ name: event.target.value });
     }
     const handleChangeEmail = event => {
         setEmail({ name: event.target.value });
     }
-    const  handleChangeId = event => {
+    const handleChangeId = event => {
         setEmail({ name: event.target.value });
     }
-    const  handleChangePassword = event => {
+    const handleChangePassword = event => {
         setPassword({ name: event.target.value });
     }
-    const  handleChangeDateInscription = event => {
+    const handleChangeDateInscription = event => {
         setDateInscription({ name: event.target.value });
     }
     const handleChangeNumCNI = event => {
         setNumCNI({ name: event.target.value });
     }
-   
+
     const handleSubmit = event => {
         event.preventDefault();
 
@@ -108,10 +115,11 @@ export const Div_Inscription = () => {
         };
         console.log(user);
 
-        axios.post(`https://localhost:5001/create_client`, { user })
+        axios.post(`https://localhost:5001/create_client`,  user )
             .then(res => {
                 console.log(res);
                 console.log(res.data);
+                console.log("formulaire envoyer !!!");
             })
     }
 
@@ -119,11 +127,13 @@ export const Div_Inscription = () => {
     return (
         <Div_Inscriptions>
             <div className='conteneur'>
-                <br /><br /><br /><br /><br />
+                <br />
                 <div className='final'>
                     <div className='gauche'>
                         <h1>S'inscrire'</h1>
                         <Form onSubmit={handleSubmit}>
+                            <h1>S'inscrire</h1>
+
                             <Row className="mb-3">
                                 <Form.Group as={Col} controlId="formGridEmail" >
                                     <Form.Label>Email</Form.Label>
@@ -171,12 +181,12 @@ export const Div_Inscription = () => {
 
                                 <Form.Group as={Col} controlId="formGridZip">
                                     <Form.Label>Ville</Form.Label>
-                                    <Form.Control  /> 
+                                    <Form.Control />
                                 </Form.Group>
                             </Row>
 
                             <Form.Group className="mb-3" id="formGridCheckbox">
-                                <Form.Check type="checkbox" label="Check me out"  />
+                                <Form.Check type="checkbox" label="Check me out" />
                             </Form.Group>
 
                             <Button variant="primary" type="submit">
@@ -189,7 +199,7 @@ export const Div_Inscription = () => {
                         <img src="/images/inscription.jpg" />
                     </div>
                 </div>
-                <br /><br /><br /><br /><br /><br /><br />
+                <br />
             </div>
         </Div_Inscriptions>
     )

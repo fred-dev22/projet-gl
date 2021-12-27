@@ -7,6 +7,7 @@ import NotFound from './Pages/NotFound';
 import Agences from './Pages/Agences';
 import Voyages from './Pages/Voyages';
 import Apropos from './Pages/Apropos';
+import Mon_compte from './Pages/Mon_compte';
 
 function App() {
  
@@ -19,6 +20,7 @@ function App() {
         <Route path="voyages" element={<Voyages/>}/>
         <Route path="agences" element={<Agences/>}/>
         <Route path="a-propos" element={<Apropos/>}/>
+        <Route path="compte" element={<Mon_compte/>}/>
         <Route  path="*" element={<NotFound/>} />
       </Routes>
     </BrowserRouter>
