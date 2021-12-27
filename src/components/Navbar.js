@@ -178,31 +178,19 @@ background-color:#6c63ff;
         text-align: center;
     }
     .buttonStyle{
-    margin-right:30px;
-    border:solid white 3px ;
-    border-radius:10px;
-    padding:10px;
-    font-size:15px;
-    font-weight:bold;
-    background-color:transparent;
-    color:white;
+      margin-right:30px;
+      border:solid white 3px ;
+      border-radius:10px;
+      padding:10px;
+      font-size:15px;
+      font-weight:bold;
+      background-color:transparent;
+      color:white;
+    }
     :hover{
       background-color:#551a8b;
       color:white;
     }
   }
-
-  .active-button-link{
-    text-decoration:none;
-    margin-right:30px;
-    border:solid white 3px ;
-    border-radius:10px;
-    padding:10px;
-    font-size:15px;
-    font-weight:bold;
-    background-color:white;
-    color:black;
-  }
- 
-  }
+}
 `
