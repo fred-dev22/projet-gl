@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Form from "react-bootstrap/Form"
 import FloatingLabel from "react-bootstrap/FloatingLabel"
+import { useNavigate } from "react-router";
 
 
 const voyagesData = [
@@ -20,7 +21,14 @@ const voyagesData = [
 ]
 
 
-const Un_voyage = ({image,type_voyage, prix, ville_depart, ville_arrive, duree, Heure_depart, date_depart, Nom_Agence }) => {
+export const Un_voyage = ({image,type_voyage, prix, ville_depart, ville_arrive, duree, Heure_depart, date_depart, Nom_Agence }) => {
+    
+    
+    let navigate=useNavigate()
+    const HandleReservation = () => {
+        navigate("/reservation")
+    }
+    
     return (
         <Div_css>
             <div className="cadre">
@@ -48,7 +56,7 @@ const Un_voyage = ({image,type_voyage, prix, ville_depart, ville_arrive, duree, 
                     </div>
 
                     <div className="bouton">
-                        <Button variant="primary btn" >
+                        <Button variant="primary btn" onClick={HandleReservation}>
                             Faire une reservation
                         </Button>
                     </div>
@@ -85,7 +93,6 @@ const Div_Voyages = () => {
         setAgence(value_vArrive)
     }
 
-    console.log(vArrive)
     return (
         <>
             <Div_f>

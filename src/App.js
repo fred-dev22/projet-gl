@@ -8,6 +8,7 @@ import Agences from './Pages/Agences';
 import Voyages from './Pages/Voyages';
 import Apropos from './Pages/Apropos';
 import Mon_compte from './Pages/Mon_compte';
+import { Reservation } from './Pages/Reservation';
 
 function App() {
  
@@ -21,6 +22,7 @@ function App() {
         <Route path="agences" element={<Agences/>}/>
         <Route path="a-propos" element={<Apropos/>}/>
         <Route path="compte" element={<Mon_compte/>}/>
+        <Route path="reservation" element={<Reservation />}/>
         <Route  path="*" element={<NotFound/>} />
       </Routes>
     </BrowserRouter>
