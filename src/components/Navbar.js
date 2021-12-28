@@ -186,11 +186,9 @@ background-color:#6c63ff;
       font-weight:bold;
       background-color:transparent;
       color:white;
+      
     }
-    :hover{
-      background-color:#551a8b;
-      color:white;
-    }
-  }
+  
+  
 }
 `
