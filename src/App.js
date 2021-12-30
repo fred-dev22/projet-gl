@@ -9,6 +9,7 @@ import Voyages from './Pages/Voyages';
 import Apropos from './Pages/Apropos';
 import Mon_compte from './Pages/Mon_compte';
 import { Reservation } from './Pages/Reservation';
+import DonneePersonnelle from './Pages/DonneePersonnelle';
 
 function App() {
  
@@ -23,6 +24,7 @@ function App() {
         <Route path="a-propos" element={<Apropos/>}/>
         <Route path="compte" element={<Mon_compte/>}/>
         <Route path="reservation/:id" element={<Reservation />}/>
+        <Route path="donnees-personnelles" element={<DonneePersonnelle/>}/>
         <Route  path="*" element={<NotFound/>} />
       </Routes>
     </BrowserRouter>
