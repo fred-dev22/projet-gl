@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import { useState } from "react"
 import { useNavigate } from 'react-router';
 import { NavLink } from 'react-router-dom';
+import axios from 'axios';
 
 
 
@@ -26,12 +27,32 @@ export const Div_Conection = (props) => {
             setPwdError(true);
         }
     };
+    const handleChangeEmail = event => {
+        setEmail({ name: event.target.value });
+    };
+    const handleChangePassword = event => {
+        setPassword({ name: event.target.value });
+    };
 
     const history= useNavigate()
     const Redirection= () =>{  
         history("/compte")
     }
-    
+    const handleSubmit = event => {
+        event.preventDefault();
+
+         
+        axios.post(`https://localhost:5001/connect_client`, { 
+            "email": email.name,
+            "motDePasse": password.name,
+
+        })
+            .then(res => {
+                console.log(res);
+                console.log(res.data);
+                console.log("formulaire envoyer !!!");
+            })
+    }
 
     return (
         <Div_Inscriptions>
@@ -43,10 +64,10 @@ export const Div_Conection = (props) => {
                     </div>
                     <div className='gauche'>
                         <h1>Se connecter</h1>
-                        <Form>
+                        <Form onSubmit={handleSubmit}>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Addresse Email / numero de telephone </Form.Label>
-                                <Form.Control type="email" placeholder="adresse mail ou numero  " value={email} onChange={(e) => setEmail(e.target.value)} />
+                                <Form.Control type="email" placeholder="adresse mail ou numero  "  onChange={handleChangeEmail} />
                                 <Form.Text className="text-muted">
                                     Ne communiquez jamais votre adress mail à quelqu'un.
                                 </Form.Text>
@@ -54,12 +75,12 @@ export const Div_Conection = (props) => {
 
                             <Form.Group className="mb-3" controlId="formBasicPassword">
                                 <Form.Label>Mot de passe</Form.Label>
-                                <Form.Control type="password" placeholder="Mot de passe" value={password} onChange={(e) => setPassword(e.target.value)} />
+                                <Form.Control type="password" placeholder="Mot de passe"   onChange={handleChangePassword} />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="formBasicCheckbox">
                                 <Form.Check type="checkbox" label="Check me out" />
                             </Form.Group>
-                            <Button variant="primary" type="button" onClick={Redirection} >
+                            <Button variant="primary" type="submit" onClick={Redirection} >
                                 Se Connecter
                             </Button> 
                             <div className='sincr'><span className='si'>vous n'avez pas de compte?</span> <NavLink to="/inscription" className="link">S'inscrire</NavLink></div>

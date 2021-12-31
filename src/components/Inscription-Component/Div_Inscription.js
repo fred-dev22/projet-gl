@@ -63,6 +63,7 @@ const Div_Inscriptions = styled.div`
 export const Div_Inscription = () => {
     const [Nom, setNom] = useState('');
     const [Prenom, setPrenom] = useState('');
+    const [Adresse, setAdresse] = useState('');
     const [Email, setEmail] = useState('');
     const [NumeroTelephone, setNumeroTelephone] = useState('');
     const [Id, setId] = useState('');
@@ -87,6 +88,9 @@ export const Div_Inscription = () => {
     const handleChangeEmail = event => {
         setEmail({ name: event.target.value });
     }
+    const handleChangeAdresse = event => {
+        setAdresse({ name: event.target.value });
+    }
     const handleChangeId = event => {
         setEmail({ name: event.target.value });
     }
@@ -104,18 +108,26 @@ export const Div_Inscription = () => {
         event.preventDefault();
 
         const user = {
-            Nom: Nom,
-            Prenom: Prenom,
-            NumeroTelephone: NumeroTelephone,
-            Email: Email,
-            Id: Id,
-            Password: Password,
-            DateInscription: DateInscription,
-            NumCNI: NumCNI
+            nom: Nom.name,
+            prenom: Nom.name,
+            adresse: Nom.name,
+            numeroTelephone: NumeroTelephone.name,
+            email: Email.name,
+            password: Password.name,
+            dateInscription: DateInscription.name,
+            numCNI: NumCNI.name,
         };
         console.log(user);
-
-        axios.post(`https://localhost:5001/create_client`,  user )
+        axios.post(`https://localhost:5001/create_client`, { 
+           "nom": Nom.name,
+            "prenom": Nom.name,
+            "adresse": Adresse.name,
+            "numeroTelephone": NumeroTelephone.name,
+           "email": Email.name,
+            "password": Password.name,
+            "dateInscription": DateInscription.name,
+            "numCNI": NumCNI.name,
+        })
             .then(res => {
                 console.log(res);
                 console.log(res.data);
@@ -181,7 +193,7 @@ export const Div_Inscription = () => {
 
                                 <Form.Group as={Col} controlId="formGridZip">
                                     <Form.Label>Ville</Form.Label>
-                                    <Form.Control />
+                                    <Form.Control onChange={handleChangeAdresse}/>
                                 </Form.Group>
                             </Row>
 
