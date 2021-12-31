@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Container, Row, Col, Button } from 'react-bootstrap'
+import { NavLink } from "react-router-dom";
 
 
 export const Div_Body = () => {
@@ -17,7 +18,10 @@ export const Div_Body = () => {
                                             les paramètres de écutité de votre compte utilisateur.
                                         </p>
                                     </Card.Text>
+                                    <NavLink to='/donnees-personnelles'>
                                     <Button variant="primary">Voir Mes Informations </Button>
+                                    </NavLink>
+
                                 </Card.Body>
                             </Card>
                         </Col>

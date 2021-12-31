@@ -1,10 +1,15 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { useNavigate } from "react-router"
 
 
 export const Slogan = () => {
+    const navigate=useNavigate()
+    const Validation =()=>{
+        navigate("/voyages")
+    }
     const monButton = (
-        <button className="monButton">Faire une reservation</button>
+        <button className="monButton"  onClick={Validation} >Faire une reservation</button>
     );
     return (
         <DivContainer >

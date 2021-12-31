@@ -107,15 +107,17 @@ background-color:#6c63ff;
     display: none;
   }
   .buttonStyle{
-    border:solid #551a8b 2px ;
+    border:solid white 2px ;
     border-radius:5px;
     padding:5px 15px 5px 15px;
     font-size:12px;
     font-weight:bold;
     background-color:transparent;
-    color:#551a8b;
+    color:white;
     list-style-type: none;
     text-decoration: none;
+    margin-bottom:5px;
+
     :hover{
       background-color:#551a8b;
       color:white;
@@ -178,19 +180,31 @@ background-color:#6c63ff;
         text-align: center;
     }
     .buttonStyle{
-      margin-right:30px;
-      border:solid white 3px ;
-      border-radius:10px;
-      padding:10px;
-      font-size:15px;
-      font-weight:bold;
-      background-color:transparent;
-      color:white;
-    }
+    margin-right:30px;
+    border:solid white 3px ;
+    border-radius:10px;
+    padding:10px;
+    font-size:15px;
+    font-weight:bold;
+    background-color:transparent;
+    color:white;
     :hover{
       background-color:#551a8b;
       color:white;
     }
   }
-}
+
+  .active-button-link{
+    text-decoration:none;
+    margin-right:30px;
+    border:solid white 3px ;
+    border-radius:10px;
+    padding:10px;
+    font-size:15px;
+    font-weight:bold;
+    background-color:white;
+    color:black;
+  }
+ 
+  }
 `
