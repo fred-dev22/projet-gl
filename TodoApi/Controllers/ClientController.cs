@@ -119,6 +119,7 @@ namespace webapi.Controllers
         public Task<ActionResult<Client>> updatePassword([FromBody][Required] Credentials credentials, [FromRoute][Required] Guid ClientId)
         {
             throw new NotImplementedException();
+            
         }
     }
 }

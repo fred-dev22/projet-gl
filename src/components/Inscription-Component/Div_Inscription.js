@@ -1,9 +1,13 @@
 import styled from '@emotion/styled'
-import React from 'react'
+import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import axios from 'axios';
+
+
+
 
 const Div_Inscriptions = styled.div`
     
@@ -57,46 +61,123 @@ const Div_Inscriptions = styled.div`
 `
 
 export const Div_Inscription = () => {
+    const [Nom, setNom] = useState('');
+    const [Prenom, setPrenom] = useState('');
+    const [Adresse, setAdresse] = useState('');
+    const [Email, setEmail] = useState('');
+    const [NumeroTelephone, setNumeroTelephone] = useState('');
+    const [Id, setId] = useState('');
+    const [Password, setPassword] = useState('');
+    const [DateInscription, setDateInscription] = useState('');
+    const [NumCNI, setNumCNI] = useState('');
+
+
+
+    const handleChangeNom = event => {
+        setNom({ name: event.target.value });
+    }
+    const handleChangePrenom = event => {
+        setPrenom({ name: event.target.value });
+    }
+    // const handleChangeAdresse = event => {
+    //     set({ name: event.target.value });
+    // }
+    const handleChangeNumeroTelephone = event => {
+        setNumeroTelephone({ name: event.target.value });
+    }
+    const handleChangeEmail = event => {
+        setEmail({ name: event.target.value });
+    }
+    const handleChangeAdresse = event => {
+        setAdresse({ name: event.target.value });
+    }
+    const handleChangeId = event => {
+        setEmail({ name: event.target.value });
+    }
+    const handleChangePassword = event => {
+        setPassword({ name: event.target.value });
+    }
+    const handleChangeDateInscription = event => {
+        setDateInscription({ name: event.target.value });
+    }
+    const handleChangeNumCNI = event => {
+        setNumCNI({ name: event.target.value });
+    }
+
+    const handleSubmit = event => {
+        event.preventDefault();
+
+        const user = {
+            nom: Nom.name,
+            prenom: Nom.name,
+            adresse: Nom.name,
+            numeroTelephone: NumeroTelephone.name,
+            email: Email.name,
+            password: Password.name,
+            dateInscription: DateInscription.name,
+            numCNI: NumCNI.name,
+        };
+        console.log(user);
+        axios.post(`https://localhost:5001/create_client`, { 
+           "nom": Nom.name,
+            "prenom": Nom.name,
+            "adresse": Adresse.name,
+            "numeroTelephone": NumeroTelephone.name,
+           "email": Email.name,
+            "password": Password.name,
+            "dateInscription": DateInscription.name,
+            "numCNI": NumCNI.name,
+        })
+            .then(res => {
+                console.log(res);
+                console.log(res.data);
+                console.log("formulaire envoyer !!!");
+            })
+    }
+
+
     return (
         <Div_Inscriptions>
             <div className='conteneur'>
                 <br />
                 <div className='final'>
                     <div className='gauche'>
-                        <h1>S'inscrire</h1>
-                        <Form>
+                        <h1>S'inscrire'</h1>
+                        <Form onSubmit={handleSubmit}>
+                            <h1>S'inscrire</h1>
+
                             <Row className="mb-3">
-                                <Form.Group as={Col} controlId="formGridEmail">
+                                <Form.Group as={Col} controlId="formGridEmail" >
                                     <Form.Label>Email</Form.Label>
-                                    <Form.Control type="email" placeholder="Entrer l'email"  />
+                                    <Form.Control type="email" placeholder="Entrer l'email" onChange={handleChangeEmail} />
                                 </Form.Group>
 
 
                                 <Form.Group as={Col} controlId="formGridPassword">
                                     <Form.Label>Mot de passe</Form.Label>
-                                    <Form.Control type="password" placeholder="Mot de passe" />
+                                    <Form.Control type="password" placeholder="Mot de passe" onChange={handleChangePassword} />
                                 </Form.Group>
                             </Row>
 
                             <Form.Group className="mb-3" controlId="formGridAddress1">
                                 <Form.Label>Nom</Form.Label>
-                                <Form.Control placeholder="votre Nom" />
+                                <Form.Control placeholder="votre Nom" onChange={handleChangeNom} />
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formGridAddress2">
                                 <Form.Label>Numero de telephone</Form.Label>
-                                <Form.Control placeholder="6XXXXXXXXX" />
+                                <Form.Control placeholder="6XXXXXXXXX" onChange={handleChangeNumeroTelephone} />
                             </Form.Group>
 
                             <Row className="mb-3">
                                 <Form.Group as={Col} controlId="formGridCity">
                                     <Form.Label>Numero CNI</Form.Label>
-                                    <Form.Control />
+                                    <Form.Control onChange={handleChangeNumCNI} />
                                 </Form.Group>
 
                                 <Form.Group as={Col} controlId="formGridState">
                                     <Form.Label>Region</Form.Label>
-                                    <Form.Select defaultValue="Ouest">
+                                    <Form.Select defaultValue="Ouest" >  // avons nous vraiment besoint de cette information l'ors d'une inscription??
                                         <option>Nord</option>
                                         <option>Sud</option>
                                         <option>EST</option>
@@ -112,7 +193,7 @@ export const Div_Inscription = () => {
 
                                 <Form.Group as={Col} controlId="formGridZip">
                                     <Form.Label>Ville</Form.Label>
-                                    <Form.Control />
+                                    <Form.Control onChange={handleChangeAdresse}/>
                                 </Form.Group>
                             </Row>
 

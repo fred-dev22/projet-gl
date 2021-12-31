@@ -30,6 +30,40 @@ C:\Users\franck\Desktop\projet\projet-gl\TodoApi\bin\Debug\net6.0\Microsoft.Enti
 C:\Users\franck\Desktop\projet\projet-gl\TodoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\franck\Desktop\projet\projet-gl\TodoApi\bin\Debug\net6.0\MySqlConnector.dll
 C:\Users\franck\Desktop\projet\projet-gl\TodoApi\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+<<<<<<< HEAD
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\bin\Debug\net6.0\appsettings.json
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\bin\Debug\net6.0\TodoApi.exe
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\bin\Debug\net6.0\TodoApi.deps.json
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\bin\Debug\net6.0\TodoApi.runtimeconfig.json
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\bin\Debug\net6.0\TodoApi.dll
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\bin\Debug\net6.0\ref\TodoApi.dll
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\bin\Debug\net6.0\TodoApi.pdb
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\obj\Debug\net6.0\TodoApi.csproj.AssemblyReference.cache
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\obj\Debug\net6.0\TodoApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\obj\Debug\net6.0\TodoApi.AssemblyInfoInputs.cache
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\obj\Debug\net6.0\TodoApi.AssemblyInfo.cs
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\obj\Debug\net6.0\TodoApi.csproj.CoreCompileInputs.cache
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\obj\Debug\net6.0\TodoApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\obj\Debug\net6.0\TodoApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\obj\Debug\net6.0\scopedcss\bundle\TodoApi.styles.css
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\obj\Debug\net6.0\TodoApi.csproj.CopyComplete
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\obj\Debug\net6.0\TodoApi.dll
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\obj\Debug\net6.0\ref\TodoApi.dll
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\obj\Debug\net6.0\TodoApi.pdb
+C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\obj\Debug\net6.0\TodoApi.genruntimeconfig.cache
+=======
 C:\Users\Dimitri\Documents\Work_Space\projet-gl\TodoApi\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Dimitri\Documents\Work_Space\projet-gl\TodoApi\bin\Debug\net6.0\appsettings.json
 C:\Users\Dimitri\Documents\Work_Space\projet-gl\TodoApi\bin\Debug\net6.0\TodoApi.exe
@@ -62,3 +96,4 @@ C:\Users\Dimitri\Documents\Work_Space\projet-gl\TodoApi\obj\Debug\net6.0\TodoApi
 C:\Users\Dimitri\Documents\Work_Space\projet-gl\TodoApi\obj\Debug\net6.0\ref\TodoApi.dll
 C:\Users\Dimitri\Documents\Work_Space\projet-gl\TodoApi\obj\Debug\net6.0\TodoApi.pdb
 C:\Users\Dimitri\Documents\Work_Space\projet-gl\TodoApi\obj\Debug\net6.0\TodoApi.genruntimeconfig.cache
+>>>>>>> development
