@@ -20,11 +20,11 @@ namespace webapi.Models
 
         public string VilleArriver { get; set; }
 
-        public int PrixUnitaire { get; set; }
+        public string PrixUnitaire { get; set; }
 
-        public int PrixTotalVerser { get; set; }
+        // public int PrixTotalVerser { get; set; }
 
-        public int NombreDePlace { get; set; }
+        public string NombreDePlace { get; set; }
 
         public string ListNumerosDeSiege { get; set; }
 

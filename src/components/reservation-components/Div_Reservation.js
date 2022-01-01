@@ -14,131 +14,6 @@ import axios from 'axios';
 
 export const Div_Reservation = (props) => {
     const [validated, setValidated] = useState(false);
-
-    const [Nom, setNom] = useState('');
-    const [Prenom, setPrenom] = useState('');
-    const [NumTelephone, setNumTelephone] = useState('');
-    const [NumTelephoneDeDepot, setNumTelephoneDeDepot] = useState('');
-    const [NumCNI, setNumCNI] = useState('');
-    const [VilleDeDepart, setVilleDeDepart] = useState('');
-    const [VilleArriver, setVilleArriver] = useState('');
-    const [DateDepart, setDateDepart] = useState('');
-    const [HeureDeDepart, setHeureDeDepart] = useState('');
-    const [NombreDePlace, setNombreDePlace] = useState(0);
-    const [PrixUnitaire, setPrixUnitaire] = useState(0);
-    const [ListeSiege, setListeSiege] = useState('0');
-    const [PrixTotalVerser, setPrixTotalVerser] = useState(NombreDePlace * PrixUnitaire);
-    const [Agence, setAgence] = useState('');
-
-    const handleChangeNom = event => {
-        setNom({ name: event.target.value });
-    }
-
-    const handleChangePrenom = event => {
-        setPrenom({ name: event.target.value });
-    }
-
-    const handleChangeNumTelephone = event => {
-        setNumTelephone({ name: event.target.value });
-    }
-
-    const handleChangeNumTelephoneDeDepot = event => {
-        setNumTelephoneDeDepot({ name: event.target.value });
-    }
-
-    const handleChangeNumCNI = event => {
-        setNumCNI({ name: event.target.value });
-    }
-
-    const handleChangeVilleDeDepart = event => {
-        setVilleDeDepart({ name: event.target.value });
-    }
-
-    const handleChangeVilleArriver = event => {
-        setVilleArriver({ name: event.target.value });
-    }
-
-    const handleChangeDateDepart = event => {
-        setDateDepart({ name: event.target.value });
-    }
-
-    const handleChangeHeureDeDepart = event => {
-        setHeureDeDepart({ name: event.target.value });
-    }
-
-    const handleChangeNombreDePlace = event => {
-        setNombreDePlace({ name: Number.Parce(event.target.value) });
-    }
-
-
-    const handleChangePrixUnitaire = event => {
-        setPrixUnitaire({ name: Number.Parce(event.target.value) });
-    }
-
-
-    const handleChangeListesiege = event => {
-        setListeSiege({ name: event.target.value });
-    }
-
-
-    const handleChangeAgence = event => {
-        setAgence({ name: event.target.value });
-    }
-
-    const handleSubmit = (event) => {
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
-
-        setValidated(true);
-
-        const user = {
-            nom: Nom.name,
-            prenom: Prenom.name,
-            nomAgence: Agence.name,
-            villeDeDepart: VilleDeDepart.name,
-            villeArriver: VilleArriver.name,
-            prixUnitaire: PrixUnitaire.name,
-            prixTotalVerser: PrixTotalVerser.name,
-            nombreDePlace: NombreDePlace.name,
-            listNumerosDeSiege: ListeSiege.name,
-            numeroDeTelephone: NumTelephone.name,
-            numeroDeTelephonePourDepot: NumTelephoneDeDepot.name,
-            numCNI: NumCNI.name,
-            DateDeDepart: DateDepart.name,
-            heureDeDepart: HeureDeDepart.name,
-        };
-        console.log(user);
-        axios.post(`https://localhost:5001/create_reservation`, {
-            "nom": Nom.name,
-            "prenom": Prenom.name,
-           " nomAgence": Agence.name,
-            "villeDeDepart": VilleDeDepart.name,
-            "villeArriver": VilleArriver.name,
-            "prixUnitaire": PrixUnitaire.name,
-            "prixTotalVerser": PrixTotalVerser.name,
-            "nombreDePlace": NombreDePlace.name,
-            "listNumerosDeSiege": ListeSiege.name,
-            "numeroDeTelephone": NumTelephone.name,
-           " numeroDeTelephonePourDepot": NumTelephoneDeDepot.name,
-            "numCNI": NumCNI.name,
-            "DateDeDepart": DateDepart.name,
-            "heureDeDepart": HeureDeDepart.name,
-        })
-            .then(res => {
-                console.log(res);
-                console.log(res.data);
-                console.log("formulaire envoyer !!!");
-            })
-    };
-
-
-
-
-    //valeurs utilise dans las values des imputs
-
     const id = useParams().id
     let villeDepart
     let villeArrive
@@ -159,6 +34,110 @@ export const Div_Reservation = (props) => {
             }
         }
     )
+
+    const [Nom, setNom] = useState('');
+    const [Prenom, setPrenom] = useState('');
+    const [NumTelephone, setNumTelephone] = useState('');
+    const [NumTelephoneDeDepot, setNumTelephoneDeDepot] = useState('');
+    const [NumCNI, setNumCNI] = useState('');
+    const [VilleDeDepart, setVilleDeDepart] = useState('');
+    // setVilleDeDepart({ name: villeDepart });
+    const [VilleArriver, setVilleArriver] = useState('');
+    // setVilleArriver({ name: villeArrive });
+    const [DateDepart, setDateDepart] = useState('');
+    // setDateDepart({ name: Date });
+    const [HeureDeDepart, setHeureDeDepart] = useState('');
+    // setHeureDeDepart({ name: HeureDepart });
+    const [NombreDePlace, setNombreDePlace] = useState('');
+    const [PrixUnitaire, setPrixUnitaire] = useState('');
+    // setPrixUnitaire({ name: Prix });
+    const [ListeSiege, setListeSiege] = useState('');
+    // setListeSiege({ name: '0,1' });
+    // const [PrixTotalVerser, setPrixTotalVerser] = useState('');
+    const [Agence, setAgence] = useState('');
+    // setAgence({ name: Agences });
+ 
+    const handleChangeNom = event => {
+        setNom({ name: event.target.value });
+    }
+
+    const handleChangePrenom = event => {
+        setPrenom({ name: event.target.value });
+    }
+
+    const handleChangeNumTelephone = event => {
+        setNumTelephone({ name: event.target.value });
+    }
+
+    const handleChangeNumTelephoneDeDepot = event => {
+        setNumTelephoneDeDepot({ name: event.target.value});
+    }
+
+    const handleChangeNumCNI = event => {
+        setNumCNI({ name: event.target.value });
+    }
+
+ 
+    const handleChangeNombreDePlace = event => {
+        setNombreDePlace({ name: event.target.value });
+    }
+
+
+    const handleSubmit = (event) => {
+        const form = event.currentTarget;
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+
+        setValidated(true);
+
+        const user = {
+            nom: Nom.name,
+            prenom: Prenom.name,
+            nomAgence: Agence.name,
+            villeDeDepart: VilleDeDepart.name,
+            villeArriver: VilleArriver.name,
+            prixUnitaire: PrixUnitaire.name,
+            // prixTotalVerser: PrixTotalVerser.name,
+            nombreDePlace: NombreDePlace.name,
+            listNumerosDeSiege: ListeSiege.name,
+            numeroDeTelephone: NumTelephone.name,
+            numeroDeTelephonePourDepot: NumTelephoneDeDepot.name,
+            numCNI: NumCNI.name,
+            DateDeDepart: DateDepart.name,
+            heureDeDepart: HeureDeDepart.name,
+        };
+        console.log(user);
+        axios.post(`https://localhost:5001/create_reservation`, {
+            "nom": Nom.name,
+            "prenom": Prenom.name,
+            " nomAgence": Agence.name,
+            "villeDeDepart": VilleDeDepart.name,
+            "villeArriver": VilleArriver.name,
+            "prixUnitaire": PrixUnitaire.name,
+            // "prixTotalVerser": PrixTotalVerser.name,
+            "nombreDePlace": NombreDePlace.name,
+            "listNumerosDeSiege": ListeSiege.name,
+            "numeroDeTelephone": NumTelephone.name,
+            " numeroDeTelephonePourDepot": NumTelephoneDeDepot.name,
+            "numCNI": NumCNI.name,
+            "DateDeDepart": DateDepart.name,
+            "heureDeDepart": HeureDeDepart.name,
+        })
+            .then(res => {
+                console.log(res);
+                console.log(res.data);
+                console.log("formulaire envoyer !!!");
+            })
+    };
+
+
+
+
+    //valeurs utilise dans las values des imputs
+
+
     return (
         <Style_form>
             <div className="principal">
@@ -214,7 +193,7 @@ export const Div_Reservation = (props) => {
                             <Form.Label>Numero CNI</Form.Label>
                             <InputGroup hasValidation>
                                 <InputGroup.Text id="inputGroupPrepend">CNI</InputGroup.Text>
-                                <Form.Control type="text" placeholder="Numero CNI" required  onChange={handleChangeNumCNI}/>
+                                <Form.Control type="text" placeholder="Numero CNI" required onChange={handleChangeNumCNI} />
                                 <Form.Control.Feedback type="invalid">
                                     Veuillez saisir un numero de CNI valide.
                                 </Form.Control.Feedback>
@@ -222,25 +201,25 @@ export const Div_Reservation = (props) => {
                         </Form.Group>
                         <Form.Group as={Col} md="4" controlId="validationCustom04">
                             <Form.Label>Ville de Depart</Form.Label>
-                            <Form.Control type="text" placeholder="Ville de Depart" value={villeDepart} disabled  onChange={handleChangeVilleDeDepart}/>
+                            <Form.Control type="text" placeholder="Ville de Depart" value={villeDepart} disabled />
                         </Form.Group>
                         <Form.Group as={Col} md="4" controlId="validationCustom05">
                             <Form.Label>Ville d'arrive</Form.Label>
-                            <Form.Control type="text" placeholder="Ville d'arrive" value={villeArrive} disabled onChange={handleChangeVilleArriver}/>
+                            <Form.Control type="text" placeholder="Ville d'arrive" value={villeArrive} disabled />
                         </Form.Group>
                     </Row>
                     <Row className="mb-4">
                         <Form.Group as={Col} md="4" controlId="validationCustom03">
                             <Form.Label>Date de depart</Form.Label>
-                            <Form.Control type="text" placeholder="Date de depart" value={Date} disabled onChange={handleChangeDateDepart} />
+                            <Form.Control type="text" placeholder="Date de depart" value={Date} disabled />
                         </Form.Group>
                         <Form.Group as={Col} md="4" controlId="validationCustom04">
                             <Form.Label>Heure de Depart</Form.Label>
-                            <Form.Control type="text" placeholder="Heure de Depart" value={HeureDepart} disabled onChange={handleChangeHeureDeDepart}/>
+                            <Form.Control type="text" placeholder="Heure de Depart" value={HeureDepart} disabled />
                         </Form.Group>
                         <Form.Group as={Col} md="4" controlId="validationCustom05">
                             <Form.Label>Nombre de paces</Form.Label>
-                            <Form.Control type="text" placeholder="Nombre de paces" required onChange={handleChangeNombreDePlace}/>
+                            <Form.Control type="text" placeholder="Nombre de paces" required onChange={handleChangeNombreDePlace} />
                             <Form.Control.Feedback type="invalid">
                                 entrer un nombre de places valide.
                             </Form.Control.Feedback>
@@ -249,11 +228,11 @@ export const Div_Reservation = (props) => {
                     <Row className="mb-4">
                         <Form.Group as={Col} md="4" controlId="validationCustom03">
                             <Form.Label>Prix</Form.Label>
-                            <Form.Control type="text" placeholder="Prix" value={Prix} disabled onChange={handleChangePrixUnitaire} />
+                            <Form.Control type="text" placeholder="Prix" value={Prix} disabled />
                         </Form.Group>
                         <Form.Group as={Col} md="4" controlId="validationCustom04">
                             <Form.Label>Agence</Form.Label>
-                            <Form.Control type="text" placeholder="Agence" value={Agences} disabled onChange={handleChangeAgence} />
+                            <Form.Control type="text" placeholder="Agence" value={Agences} disabled />
                         </Form.Group>
                         <Form.Group as={Col} md="4" controlId="validationCustom05">
                             <Form.Label>Nombre de depot</Form.Label>
