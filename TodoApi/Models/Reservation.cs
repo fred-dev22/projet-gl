@@ -12,7 +12,7 @@ namespace webapi.Models
 
         public DateTime DateReservetion { get; set; }
 
-        public string NomAgence { get; set; }
+        public  string NomAgence { get; set; }
 
         public string DateDeDepart { get; set; }
 
