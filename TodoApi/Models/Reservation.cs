@@ -14,7 +14,7 @@ namespace webapi.Models
 
         public string NomAgence { get; set; }
 
-        public DateTime DateDeDepart { get; set; }
+        public string DateDeDepart { get; set; }
 
         public string VilleDeDepart { get; set; }
 
@@ -34,7 +34,7 @@ namespace webapi.Models
 
         public string NumCNI { get; set; }
 
-        public DateTime HeureDeDepart { get; set; }
+        public string HeureDeDepart { get; set; }
 
     }
 }

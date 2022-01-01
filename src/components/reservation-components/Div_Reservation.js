@@ -34,29 +34,21 @@ export const Div_Reservation = (props) => {
             }
         }
     )
-
+    const [ID, setID] = useState('');
     const [Nom, setNom] = useState('');
     const [Prenom, setPrenom] = useState('');
     const [NumTelephone, setNumTelephone] = useState('');
     const [NumTelephoneDeDepot, setNumTelephoneDeDepot] = useState('');
     const [NumCNI, setNumCNI] = useState('');
-    const [VilleDeDepart, setVilleDeDepart] = useState('');
-    // setVilleDeDepart({ name: villeDepart });
-    const [VilleArriver, setVilleArriver] = useState('');
-    // setVilleArriver({ name: villeArrive });
-    const [DateDepart, setDateDepart] = useState('');
-    // setDateDepart({ name: Date });
-    const [HeureDeDepart, setHeureDeDepart] = useState('');
-    // setHeureDeDepart({ name: HeureDepart });
+    const [VilleDeDepart, setVilleDeDepart] = useState(villeDepart);
+    const [VilleArriver, setVilleArriver] = useState(villeArrive);
+    const [DateDepart, setDateDepart] = useState(Date);
+    const [HeureDeDepart, setHeureDeDepart] = useState(HeureDepart);
     const [NombreDePlace, setNombreDePlace] = useState('');
-    const [PrixUnitaire, setPrixUnitaire] = useState('');
-    // setPrixUnitaire({ name: Prix });
-    const [ListeSiege, setListeSiege] = useState('');
-    // setListeSiege({ name: '0,1' });
-    // const [PrixTotalVerser, setPrixTotalVerser] = useState('');
-    const [Agence, setAgence] = useState('');
-    // setAgence({ name: Agences });
- 
+    const [PrixUnitaire, setPrixUnitaire] = useState(Prix);
+    const [ListeSiege, setListeSiege] = useState('0,1');
+    const [Agence, setAgence] = useState(Agences);
+
     const handleChangeNom = event => {
         setNom({ name: event.target.value });
     }
@@ -70,14 +62,14 @@ export const Div_Reservation = (props) => {
     }
 
     const handleChangeNumTelephoneDeDepot = event => {
-        setNumTelephoneDeDepot({ name: event.target.value});
+        setNumTelephoneDeDepot({ name: event.target.value });
     }
 
     const handleChangeNumCNI = event => {
         setNumCNI({ name: event.target.value });
     }
 
- 
+
     const handleChangeNombreDePlace = event => {
         setNombreDePlace({ name: event.target.value });
     }
@@ -95,47 +87,47 @@ export const Div_Reservation = (props) => {
         const user = {
             nom: Nom.name,
             prenom: Prenom.name,
-            nomAgence: Agence.name,
-            villeDeDepart: VilleDeDepart.name,
-            villeArriver: VilleArriver.name,
-            prixUnitaire: PrixUnitaire.name,
-            // prixTotalVerser: PrixTotalVerser.name,
+            dateReservetion: "2022-01-01T11:58:03.393Z",
+            nomAgence: Agence,
+            villeDeDepart: VilleDeDepart,
+            villeArriver: VilleArriver,
+            prixUnitaire: PrixUnitaire,
             nombreDePlace: NombreDePlace.name,
-            listNumerosDeSiege: ListeSiege.name,
+            listNumerosDeSiege: ListeSiege,
             numeroDeTelephone: NumTelephone.name,
             numeroDeTelephonePourDepot: NumTelephoneDeDepot.name,
             numCNI: NumCNI.name,
-            DateDeDepart: DateDepart.name,
-            heureDeDepart: HeureDeDepart.name,
+            DateDeDepart: DateDepart,
+            heureDeDepart: HeureDeDepart,
         };
+        console.log('je suis là ' + VilleDeDepart);
+
         console.log(user);
         axios.post(`https://localhost:5001/create_reservation`, {
+           
             "nom": Nom.name,
             "prenom": Prenom.name,
-            " nomAgence": Agence.name,
-            "villeDeDepart": VilleDeDepart.name,
-            "villeArriver": VilleArriver.name,
-            "prixUnitaire": PrixUnitaire.name,
-            // "prixTotalVerser": PrixTotalVerser.name,
+            "nomAgence": Agence,
+            "dateDeDepart": DateDepart,
+            "villeDeDepart": VilleDeDepart,
+            "villeArriver": VilleArriver,
+            "prixUnitaire": PrixUnitaire,
             "nombreDePlace": NombreDePlace.name,
-            "listNumerosDeSiege": ListeSiege.name,
+            "listNumerosDeSiege": ListeSiege,
             "numeroDeTelephone": NumTelephone.name,
-            " numeroDeTelephonePourDepot": NumTelephoneDeDepot.name,
+            "numeroDeTelephonePourDepot": NumTelephoneDeDepot.name,
             "numCNI": NumCNI.name,
-            "DateDeDepart": DateDepart.name,
-            "heureDeDepart": HeureDeDepart.name,
+            "heureDeDepart": HeureDeDepart,
+
+           
         })
             .then(res => {
+                console.log('je suis là ');
                 console.log(res);
                 console.log(res.data);
                 console.log("formulaire envoyer !!!");
             })
     };
-
-
-
-
-    //valeurs utilise dans las values des imputs
 
 
     return (

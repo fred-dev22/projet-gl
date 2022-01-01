@@ -11,7 +11,6 @@ namespace webapi.Data
 
         }
 
-
         public DbSet<Client> Client { get; set; }
 
          public DbSet<Reservation> Reservation { get; set; }

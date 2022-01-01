@@ -44,8 +44,8 @@ namespace webapi.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
         public async Task<ActionResult<Reservation>> CreateReservationPost([FromBody][Required] Reservation reservation)
         {
-           
 
+           
             return await CreateReservation(reservation);
         }
 
