@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9tlW9Fb9WjWlEqe5LMiw7Vrw5shq1tAL0qLfJeEZPAgFPRF+z7vMghy3COWG90HcSV8XkzH0/Sm7u/J77aYxFA==",
+  "dgSpecHash": "qAVLuP5tQT30SJLgXGkKa9zBEIjWcuOv+CpaShXwdqGaNKiclqOia/fQAxGmAp0wIE+Hlyz6yTvsPuq/wrOL+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\donald\\Desktop\\TP IN3\\Projet Gl\\projet-gl\\TodoApi\\TodoApi.csproj",
+  "projectFilePath": "C:\\Users\\donald\\Desktop\\TP IN3\\Projet Gl\\projet-gl\\todoApi\\TodoApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\donald\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.0\\microsoft.entityframeworkcore.6.0.0.nupkg.sha512",
     "C:\\Users\\donald\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.0\\microsoft.entityframeworkcore.abstractions.6.0.0.nupkg.sha512",
@@ -29,12 +29,5 @@
     "C:\\Users\\donald\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\donald\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problème de lecture du fichier cache C:\\Users\\donald\\Desktop\\TP IN3\\Projet Gl\\projet-gl\\TodoApi\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

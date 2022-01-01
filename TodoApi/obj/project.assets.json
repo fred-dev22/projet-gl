@@ -850,11 +850,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\donald\\Desktop\\TP IN3\\Projet Gl\\projet-gl\\TodoApi\\TodoApi.csproj",
+      "projectUniqueName": "C:\\Users\\donald\\Desktop\\TP IN3\\Projet Gl\\projet-gl\\todoApi\\TodoApi.csproj",
       "projectName": "TodoApi",
-      "projectPath": "C:\\Users\\donald\\Desktop\\TP IN3\\Projet Gl\\projet-gl\\TodoApi\\TodoApi.csproj",
+      "projectPath": "C:\\Users\\donald\\Desktop\\TP IN3\\Projet Gl\\projet-gl\\todoApi\\TodoApi.csproj",
       "packagesPath": "C:\\Users\\donald\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\donald\\Desktop\\TP IN3\\Projet Gl\\projet-gl\\TodoApi\\obj\\",
+      "outputPath": "C:\\Users\\donald\\Desktop\\TP IN3\\Projet Gl\\projet-gl\\todoApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\donald\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -913,13 +913,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problème de lecture du fichier cache C:\\Users\\donald\\Desktop\\TP IN3\\Projet Gl\\projet-gl\\TodoApi\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
