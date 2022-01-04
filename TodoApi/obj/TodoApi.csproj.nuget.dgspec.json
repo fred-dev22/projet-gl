@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dimitri\\Documents\\Work_Space\\projet-gl\\TodoApi\\TodoApi.csproj": {}
+    "C:\\Users\\donald\\Desktop\\TP IN3\\Projet Gl\\projet-gl\\todoApi\\TodoApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dimitri\\Documents\\Work_Space\\projet-gl\\TodoApi\\TodoApi.csproj": {
+    "C:\\Users\\donald\\Desktop\\TP IN3\\Projet Gl\\projet-gl\\todoApi\\TodoApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dimitri\\Documents\\Work_Space\\projet-gl\\TodoApi\\TodoApi.csproj",
+        "projectUniqueName": "C:\\Users\\donald\\Desktop\\TP IN3\\Projet Gl\\projet-gl\\todoApi\\TodoApi.csproj",
         "projectName": "TodoApi",
-        "projectPath": "C:\\Users\\Dimitri\\Documents\\Work_Space\\projet-gl\\TodoApi\\TodoApi.csproj",
-        "packagesPath": "C:\\Users\\Dimitri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dimitri\\Documents\\Work_Space\\projet-gl\\TodoApi\\obj\\",
+        "projectPath": "C:\\Users\\donald\\Desktop\\TP IN3\\Projet Gl\\projet-gl\\todoApi\\TodoApi.csproj",
+        "packagesPath": "C:\\Users\\donald\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\donald\\Desktop\\TP IN3\\Projet Gl\\projet-gl\\todoApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Dimitri\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\donald\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

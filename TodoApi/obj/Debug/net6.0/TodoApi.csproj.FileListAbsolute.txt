@@ -31,6 +31,9 @@ C:\Users\franck\Desktop\projet\projet-gl\TodoApi\bin\Debug\net6.0\Microsoft.Enti
 C:\Users\franck\Desktop\projet\projet-gl\TodoApi\bin\Debug\net6.0\MySqlConnector.dll
 C:\Users\franck\Desktop\projet\projet-gl\TodoApi\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d9136f9cff5582a5054e1827ed2558bdeee33d53
 C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\bin\Debug\net6.0\appsettings.json
 C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\bin\Debug\net6.0\TodoApi.exe
@@ -63,6 +66,8 @@ C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\obj\Debug\net6.0\Todo
 C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\obj\Debug\net6.0\ref\TodoApi.dll
 C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\obj\Debug\net6.0\TodoApi.pdb
 C:\Users\donald\Desktop\TP IN3\Projet Gl\projet-gl\TodoApi\obj\Debug\net6.0\TodoApi.genruntimeconfig.cache
+<<<<<<< HEAD
+=======
 =======
 C:\Users\Dimitri\Documents\Work_Space\projet-gl\TodoApi\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Dimitri\Documents\Work_Space\projet-gl\TodoApi\bin\Debug\net6.0\appsettings.json
@@ -97,3 +102,4 @@ C:\Users\Dimitri\Documents\Work_Space\projet-gl\TodoApi\obj\Debug\net6.0\ref\Tod
 C:\Users\Dimitri\Documents\Work_Space\projet-gl\TodoApi\obj\Debug\net6.0\TodoApi.pdb
 C:\Users\Dimitri\Documents\Work_Space\projet-gl\TodoApi\obj\Debug\net6.0\TodoApi.genruntimeconfig.cache
 >>>>>>> development
+>>>>>>> d9136f9cff5582a5054e1827ed2558bdeee33d53
